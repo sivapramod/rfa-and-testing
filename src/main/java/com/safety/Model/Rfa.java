@@ -1,5 +1,8 @@
 package com.safety.Model;
 
+import java.util.List;
+import java.util.stream.Collector;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -56,11 +59,29 @@ public class Rfa {
 	public void setAction(String action) {
 		this.action = action;
 	}
+	
+
+	public Rfa(int rfaId, int incidentId, @NotEmpty(message = "reason field should not be empty..") String reason,
+			@NotEmpty(message = "action field should not be empty..") String action) {
+		super();
+		this.rfaId = rfaId;
+		this.incidentId = incidentId;
+		this.reason = reason;
+		this.action = action;
+	}
+	
+
+	public Rfa() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String toString() {
 		return "Rfa [rfaId=" + rfaId + ", incidentId=" + incidentId + ", reason=" + reason + ", action=" + action + "]";
 	}
+
+	
 	
 
 	

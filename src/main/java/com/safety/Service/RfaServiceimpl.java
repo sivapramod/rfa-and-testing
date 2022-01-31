@@ -14,9 +14,9 @@ public class RfaServiceimpl implements RfaService{
 
 	@Autowired
 	RfaDAO dao;
-	
+ 	
 	@Override
-	public Rfa addRfa(Rfa rfa) {
+ 	public Rfa addRfa(Rfa rfa) {
 
         Rfa r=dao.save(rfa);
 		return r;

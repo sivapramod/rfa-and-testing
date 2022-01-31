@@ -30,13 +30,13 @@ public class RfaRestController {
 		Rfa r = service.addRfa(rfa);
 		System.out.println(r);
 		return new ResponseEntity<Rfa>(r,HttpStatus.OK);
-	}
+	}  
 	
 	@PutMapping("/rfa/{rfaId}")
 	public ResponseEntity<Rfa> updateRfa(@PathVariable int rfaId,@RequestBody Rfa rfa){
 		
 		Rfa r = service.updateRfa(rfaId,rfa);
-		return new ResponseEntity<Rfa>(r,HttpStatus.OK);
+ 		return new ResponseEntity<Rfa>(r,HttpStatus.OK);
 	}
 	
 	@GetMapping("/rfa")
