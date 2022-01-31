@@ -44,9 +44,6 @@ public class RfaTest {
 	}
 	
 
-
-			
-			
 	
 	@Test
 	public void saveInncident() {
